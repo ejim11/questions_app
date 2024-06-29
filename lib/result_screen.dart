@@ -7,10 +7,13 @@ class ResultScreen extends StatelessWidget {
   const ResultScreen(
       {super.key, required this.chosenAnswers, required this.onRestart});
 
+// the chosen answers
   final List<String> chosenAnswers;
+
+  // function for restarting the quiz
   final void Function() onRestart;
 
-  // using a getter function
+  // using a getter function to get data for chosen and correct answers
   List<Map<String, Object>> get summaryData {
     List<Map<String, Object>> summary = [];
 

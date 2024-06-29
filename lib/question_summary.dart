@@ -5,6 +5,7 @@ import 'package:questions_app/summary_item.dart';
 class QuestionSummary extends StatelessWidget {
   const QuestionSummary(this.summaryData, {super.key});
 
+// list of the summary data
   final List<Map<String, Object>> summaryData;
 
   @override

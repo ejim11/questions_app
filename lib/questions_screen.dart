@@ -6,6 +6,7 @@ import 'package:questions_app/data/questions.dart';
 class QuestionsScreen extends StatefulWidget {
   const QuestionsScreen({super.key, required this.onSelectAnswers});
 
+// the function for selecting answers passed as a prop
   final void Function(String answer) onSelectAnswers;
 
   @override
@@ -15,10 +16,15 @@ class QuestionsScreen extends StatefulWidget {
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
+  // the state for managing the queestions, it changes based on index
   var currentQuestionIndex = 0;
 
+// function for answering questions
   void answerQuestion(String answer) {
+    // select the answer
     widget.onSelectAnswers(answer);
+
+    // move to next question
     setState(() {
       currentQuestionIndex++;
     });
